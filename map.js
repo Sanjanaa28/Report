@@ -16,7 +16,7 @@
 
 const map = {
   "data": [
-    0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
@@ -65,26 +65,26 @@ document.querySelector('a-scene').addEventListener('render-target-loaded', () =>
 
           // black wall
           if (map.data[i] === 2) {
-            wall.setAttribute('color', '#000');
+            wall.setAttribute('color', '#faf0e6');
             wall.setAttribute('static-body', '');
           }
 
           // secretwall
           else if (map.data[i] === 3) {
-            wall.setAttribute('color', '#fff');
-            wall.setAttribute('material', 'src: C:\Users\Dell\Documents\c#\report\wall-concrete.jpg; repeat: 4 4');
+            wall.setAttribute('color', '#faf0e6');
+            
           }
 
           // brick wall
           else if (map.data[i] === 4) {
-            wall.setAttribute('color', '#fff');
-            wall.setAttribute('material', 'src: C:\Users\Dell\Documents\c#\report\wall-concrete.jpg repeat: 2 2');
+            wall.setAttribute('color', '#faf0e6');
+            
             wall.setAttribute('static-body', '');
           }
 
           else { // normal walls
-            wall.setAttribute('color', '#fff');
-            wall.setAttribute('material', 'src:C:\Users\Dell\Documents\c#\report\wall-concrete.jpg; repeat: 4 4');
+            wall.setAttribute('color', '#faf0e6');
+            
             wall.setAttribute('static-body', '');
           }
         }
