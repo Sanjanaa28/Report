@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <title>VR Website</title>
+  <title>VR Website</title>
   <meta name="project">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.6.0/aframe-master.min.js"></script>
   <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
-<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
 </head>
 <body>
 
   <a-scene fog="type: linear; color: #000; far: 16; near: 7">
 
-    
+         
+
     <!-- User / Camera -->
     <a-entity
       id="player"
@@ -22,16 +23,14 @@
       listener
       position: 0 9 0
     ></a-entity>
-    <a-assets>
-      <img id="main" src="images/summerinternship.png">
-    </a-assets>
+
 
     <!-- Start Room (spawn) -->
     <a-entity position="-1.5 1.5 19.5" rotation="0 0 0">
       <!--left wall -->
-     
-        <a-image position="1 1.5 -4.4" src="#main" height="5" width="5"></a-image>
-     
+      <a-entity rotation= "0 90 0">
+        <a-image position="1 1.5 -4.4" src="https://i.ibb.co/xjDf2Ls/summerinternship.png" height="5" width="5"></a-image>
+      </a-entity>
     </a-entity>
 
     <!-- hallway -->
@@ -46,25 +45,30 @@
 
     <!-- Exampe Room 1 (Immediate right) -->
     <a-entity position="10.5 1.5 19.5" rotation="0 -90 0">
-      
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
       <!-- Back wall -->
-      <a-image position="-2 1.5 -4.4" src="#room1-example" height="5" width="2.5"></a-image>
-      <a-image position="2 1.5 -4.4" src="#room1-example" height="5" width="2.5"></a-image>
+      <a-image position="-2 1.5 -4.4" src="https://i.ibb.co/VWCfL9m/acknowledgement.png" height="5" width="2.5"></a-image>
+      <a-image position="2 1.5 -4.4" src="https://i.ibb.co/xJjXkgj/ackno1.png" height="5" width="2.5"></a-image>
       <!--right wall -->
       <a-entity rotation= "0 -90 0">
-        <a-image position="-2 1.5 -4.4" src="#room1-example" height="5" width="2.5"></a-image>
-        <a-image position="2 1.5 -4.4" src="#room1-example" height="5" width="2.5"></a-image>
+        <a-image position="-2 1.5 -4.4" src="https://i.ibb.co/F63QYqB/ackno2.png" height="5" width="2.5"></a-image>
+        <a-image position="2 1.5 -4.4" src="https://i.ibb.co/30P5KMK/ackno3.png" height="5" width="2.5"></a-image>
       </a-entity>
       <!--left wall -->
       <a-entity rotation= "0 90 0">
-        <a-image position="-2 1.5 -4.4" src="#room1-example" height="5" width="2.5"></a-image>
-        <a-image position="2 1.5 -4.4" src="#room1-example" height="5" width="2.5"></a-image>
+        <a-image position="-2 1.5 -4.4" src="https://i.ibb.co/CV8Zc9Q/undertaking-1.png" height="5" width="2.5"></a-image>
+        <a-image position="2 1.5 -4.4" src="https://i.ibb.co/CBvMkqG/undertaking-2.png" height="5" width="2.5"></a-image>
       </a-entity>
     </a-entity>
 
     <!-- Example Room 2 (First Left) -->
     <a-entity position="-10.5 1.5 7.5" rotation="0 90 0">
-       <!-- Back wall -->
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
+      <!-- Back wall -->
       <a-image position="-2 0 -4.4" src="#room2-final1" height="2.5" width="2.5"></a-image>
       <a-image position="-2 2.4 -4.4" src="#room2-final2" height="2.5" width="2.5"></a-image>
       <a-image position="2 0 -4.4" src="#room2-final3" height="2.5" width="2.5"></a-image>
@@ -119,6 +123,9 @@
 
     <!-- Example Room 4 (Second Left) -->
     <a-entity position="-10.5 1.5 -4.5" rotation="0 90 0">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
       <!-- Back wall -->
       <a-image position="0 1.5 -4.4" src="#room4-map" height="7" width="7"></a-image>
       <a-image position="0 5.1 -4.2" rotation="15 0 0" src="#room4-sign-roadshow" height="2.5" width="5"></a-image>
@@ -140,6 +147,9 @@
 
     <!-- Example Room 5 (Second Right) -->
     <a-entity position="7.5 1.5 -4.5" rotation="0 -90 0">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
       <!-- Back wall -->
       <a-image position="0 1.3 -4.4" src="#room5-landing" height="5" width="2.5"></a-image>
       <a-image position="0 5.1 -4.2" rotation="15 0 0" src="#room5-sign-back" height="2.5" width="5"></a-image>
@@ -160,10 +170,15 @@
 
     <!-- Example Room 6 (far back room ) -->
     <a-entity position="-1.5 1.5 -22.5">
+      <!-- Room Sign -->
+      <a-image position="-1.45 1 6.02" rotation="0 90 0" src="#room-sign-1" height="1.5" width="3"></a-image>
+      <a-image position="1.45 1 6.02" rotation="0 -90 0" src="#room-sign-2" height="1.5" width="3"></a-image>
       <!-- Back wall -->
       <a-video src="#theaterVideo" width="7" height="5.25" position="0 1.4 -4.4"></a-video>
       <a-image position="0 0 -4.4" src="#theater-curtains" height="12" width="9"></a-image>
-            <!-- ceiling -->
+      <!-- objects -->
+      <a-entity obj-model="obj: #couch-obj; mtl: #couch-mtl" position ="0 -1 1" rotation="0 0 0" scale="2 2 2"></a-entity>
+      <!-- ceiling -->
       <a-plane position="0 6 0" rotation="90 0 0" height="9" width="9" color="black"></a-plane>
     </a-entity>
 
@@ -188,7 +203,6 @@
 
   <script src="map.js"></script>
   <script src="video.js"></script>
-
 
 </body>
 </html>
